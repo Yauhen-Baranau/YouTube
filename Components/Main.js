@@ -14,6 +14,7 @@ state = {
   }
   
     //Search callback. Takes a keyword
+    //It is possible to implement the observer pattern (EventEmitter) in another way
     searchByKeyword =(value)=>{
       getByKeyWord(value)
       .then( response => this.setState({videoList:response.data.items}) )
