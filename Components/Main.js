@@ -14,7 +14,7 @@ state = {
   }
   
     //Search callback. Takes a keyword
-    searchByKeyword = (value) =>{
+    searchByKeyword =(value)=>{
       getByKeyWord(value)
       .then( response => this.setState({videoList:response.data.items}) )
       .catch( error => {console.error(error) })
@@ -33,10 +33,10 @@ state = {
     
     render() {
         return (
-            <div className={'mainContainer'}>
+            <div className='mainContainer'>
                 <div>
                     <h5>Search by key words...</h5>
-                    <SearchBar  cbSearchByKeyword={this.searchByKeyword}/>
+                    <SearchBar cbSearchByKeyword={this.searchByKeyword}/>
                     <br/>
                     { 
                       this.state.videoList !== null &&
@@ -45,7 +45,7 @@ state = {
                 </div>
                 <div>
                   <h5>Search by links...</h5>
-                      <SearchBar  cbSearchByKeyword={this.pasteByLink}/>
+                      <SearchBar cbSearchByKeyword={this.pasteByLink}/>
                       <br/>
                     {
                     (this.state.videoId !==null)? 
